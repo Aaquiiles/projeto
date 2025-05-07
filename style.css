@@ -25,12 +25,13 @@ tudo que recebar a var( --text-color) ficara com o texto na cor definida na vari
     --switch-bg-url: url(./assets/sun.svg);
 }
 
+/* Outra opção para o body background seria juntar todos eles, ficaria (background-image: var(--bg-url) no-repeat top center/cover;*/
 body {
 background-image: var(--bg-url);
 background-repeat: no-repeat;
 background-position:top center;
 background-size: cover;
-
+height: 100vh;
 }
 body *{
     font-family: "Inter", sans-serif;
@@ -157,4 +158,13 @@ footer{
     padding: 24px 0;
     text-align: center;
     tab-size: 14px;
+}
+
+@media ( min-width: 700px) {
+    :root {
+        --bg-url: url(./assets/bg-desktop.jpg)
+    }
+    .light {
+        --bg-url: url(./assets/bg-descktop-light.jpg)
+    }
 }
